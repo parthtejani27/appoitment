@@ -1,6 +1,6 @@
 const express = require('express')
 require('./db/mongoose')
-
+const PORT = process.env.port || 3000
 const User = require('./model/user')
 const Appointment = require('./model/appointment')
 const auth = require('./middleware/auth')
@@ -218,6 +218,7 @@ app.post('/logout', auth, async (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log('Api running on port 3000')
+app.listen(PORT, () => {
+    console.log('Api running on port '+PORT)
 })
+// aana lidhe notu haltu bc kyarnu
