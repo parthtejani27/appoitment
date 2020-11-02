@@ -7,6 +7,10 @@ const auth = require('./middleware/auth')
 const app = express()
 app.use(express.json())
 
+app.get('/', (req, res) => {
+    res.send('Wlcome to our app!')
+})
+
 app.post('/signup', async (req, res) => {
     const email = req.body.email
     const password = req.body.password
