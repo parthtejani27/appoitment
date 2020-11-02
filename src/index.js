@@ -1,6 +1,6 @@
 const express = require('express')
 require('./db/mongoose')
-const PORT = process.env.port || 3000
+const PORT = process.env.PORT || 3000
 const User = require('./model/user')
 const Appointment = require('./model/appointment')
 const auth = require('./middleware/auth')
