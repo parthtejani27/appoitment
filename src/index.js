@@ -36,6 +36,8 @@ app.post('/signupdoc', async (req, res) => {
     const password = req.body.password
     const name = req.body.name
     const degree = req.body.degree
+    const department = req.body.department
+    const symtoms = req.body.symtoms
     const ex = req.body.ex
     const add = req.body.add
     const city = req.body.city
@@ -46,7 +48,7 @@ app.post('/signupdoc', async (req, res) => {
     const user = new User({
         name,
         email,
-        password,degree,ex,add,city,role,h1,h2
+        password,degree,department,ex,add,city,role,h1,h2,symtoms
     })
     try {
         await user.save()
