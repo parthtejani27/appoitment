@@ -24,7 +24,7 @@ const userSchema = new mongoose.Schema({
         type : String,
          trim : true
     },
-    symtoms:{
+    symptoms:{
         type : Array,
         trim : true
     },
