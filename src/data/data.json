@@ -1,0 +1,81 @@
+[
+    {
+    "title" : "general phisician",
+    "questions" : [
+        "From How many days you are having cold and flu problem?",
+        "Do you have headache?",
+        "Do you have congested nose or running nose?",
+        "Do you have sore throat?",
+        "when did your nausea first start?",
+        "Have you vomited after having nausea?",
+        "what are your headache location,duration,severity(Worst ever headache?)? ",
+        "Has there been a recent head trauma or fall?",
+        "Do anyone in your family have the same medical problem?",
+        "From how many days feeling down,depressed or hopeless?",
+        "Trouble falling or staying asleep or sleeping too much?",
+        "Feeling tired or having little energy?",
+        "Poor appetite or overeating?",
+        "Any operation you have undergone in the past 6 months?",
+        "Fever is highest at what time of the day?",
+        "Are you having difficulty in breathing?",
+        "what is your body temperature now"
+    ]
+    },
+    {
+            "title" : "Dermatologist",
+            "questions" : [
+                    "What type of skin do you have?",
+                    "Did you taken any medicine from other doctor before?",
+                    "Do you have any type of Allergy?",
+                    "Do you have blood pressure or diabetes problem?",
+                    "Did you recently started using some new product?",
+                    "Do anyone in your family have the same medical problem?",
+                    "Feeling down, depressed or hopeless"
+                ]
+    },
+    {
+            "title" : "Dentist",
+            "questions": [
+                "Did you taken any medicine from other doctor before?",
+                "Have you done any treatment of teeth before?",
+                "Do you have blood pressure or diabetes problem?",
+                "have ever replaced any tooth?",
+                "From how many days you have pain in tooth?"
+
+            ]
+    },
+    {
+        "title": "Cardiologist",
+        "questions":[
+            "Did you taken any medicine from other doctor before?",
+            "Do you have blood pressure or diabetes problem?",
+            "Do anyone in your family have the same medical problem?",
+            "Is that you are taking any medicine right now?",
+            "From how much times you have facing this problem?"
+        ]
+    },
+    {
+        "title":"Psychiatrist",
+        "questions":[
+            "Has there been a recent head trauma or fall?",
+            "Do anyone in your family have the same medical problem?",
+            "Feeling down, depressed, or hopeless",
+            "Trouble falling or staying asleep, or sleeping too much",
+            "Felling tierd or having little energy",
+            "poor appetite or overeating",
+            "Feeling bad about yourself - or that you are a failure or have let yourself or your family down?",
+            "Has there been a recent head truama or fall?",
+            "Do you have little interest or pleasure in doing things?"
+        ]
+    },
+    {
+        "title":"orthopedic",
+        "questions":[
+            "where do you having pain in body?",
+            "From how many days you have this problem?",
+            "Is that you are doing gym or execise?",
+            "Is that you taken x-ray report with you?",
+            "Is that you deficiency of vitamin?"
+        ]
+    }
+]
