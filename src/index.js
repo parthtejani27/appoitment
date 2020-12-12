@@ -62,6 +62,7 @@ app.patch('/submitque',auth, async (req, res) => {
 
 const multer = require('multer')
 const { find, findById, findByIdAndUpdate } = require('./model/user')
+const { STATES } = require('mongoose')
 
 const upload = multer({
     limits:{
@@ -174,6 +175,7 @@ app.post('/signin', async (req, res) => {
 
 app.get('/get_doctors', auth, async (req, res) => {
     const doctors = await User.find({
+        city :req.query.city,
         verify:'approved',
         role : 'doctor'
     })
