@@ -213,6 +213,7 @@ app.get('/notapproved_doctors', auth, async (req, res) => {
 app.get('/department', auth, async (req, res) => {
     const doctors = await User.find({
         department : req.query.dep,
+        city : req.query.city,
         verify:'approved',
         role : 'doctor'
     })
@@ -315,6 +316,7 @@ app.get('/search_doctor_by_name', auth, async (req, res) => {
     
     const doctors = await User.find({
         symptoms : req.query.name,
+        city : req.query.city,
         verify:'approved',
         // city : req.query.city,
         role : 'doctor'
@@ -336,6 +338,7 @@ app.get('/search_doctor_by_name1', auth, async (req, res) => {
     
     const doctors = await User.find({
         name : req.query.name,
+        city : req.query.city,
         verify:'approved',
         // city : req.query.city,
         role : 'doctor'
