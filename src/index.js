@@ -174,6 +174,7 @@ app.post('/signin', async (req, res) => {
 
 app.get('/get_doctors', auth, async (req, res) => {
     const doctors = await User.find({
+        verify:'approved',
         role : 'doctor'
     })
     .select('name degree _id ex') 
@@ -212,6 +213,7 @@ app.get('/notapproved_doctors', auth, async (req, res) => {
 app.get('/department', auth, async (req, res) => {
     const doctors = await User.find({
         department : req.query.dep,
+        verify:'approved',
         role : 'doctor'
     })
     .select('name degree _id ex') 
@@ -313,6 +315,7 @@ app.get('/search_doctor_by_name', auth, async (req, res) => {
     
     const doctors = await User.find({
         symptoms : req.query.name,
+        verify:'approved',
         // city : req.query.city,
         role : 'doctor'
     }).select('_id name degree ex')
@@ -333,6 +336,7 @@ app.get('/search_doctor_by_name1', auth, async (req, res) => {
     
     const doctors = await User.find({
         name : req.query.name,
+        verify:'approved',
         // city : req.query.city,
         role : 'doctor'
     }).select('_id name degree ex')
