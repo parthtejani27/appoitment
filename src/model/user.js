@@ -53,6 +53,15 @@ const userSchema = new mongoose.Schema({
         type : String,
         trim : true
     },
+    mobile :{
+        type : String,
+        trim : true
+    },
+    gender :{
+        type : String,
+        trim : true
+    },
+    image : Buffer,
     token : String
 })
 
