@@ -189,6 +189,26 @@ app.get('/get_doctors', auth, async (req, res) => {
     })
     
 })
+
+app.get('/notapproved_doctors', auth, async (req, res) => {
+    const doctors = await User.find({
+        verify:'Not approved',
+        role : 'doctor'
+    })
+    .select('name degree _id ex') 
+
+    if(!doctors) {
+        return res.send({
+            error : 'No doctors found!'
+        })
+    }
+
+    res.send({
+        doctors
+    })
+    
+})
+
 app.get('/department', auth, async (req, res) => {
     const doctors = await User.find({
         department : req.query.dep,
