@@ -45,6 +45,12 @@ const userSchema = new mongoose.Schema({
         default : 'patient',
         trim : true
     },
+    verify : {
+        type : String,
+        default : 'Not approved',
+        trim : true
+    },
+
     h1 : {
         type : String,
         trim : true
@@ -54,6 +60,10 @@ const userSchema = new mongoose.Schema({
         trim : true
     },
     mobile :{
+        type : String,
+        trim : true
+    },
+    reg :{
         type : String,
         trim : true
     },

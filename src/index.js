@@ -51,7 +51,7 @@ app.patch('/submitque',auth, async (req, res) => {
     }, {
         new : true
     })
-    console.log(appoitment)
+    //console.log(appoitment)
     res.send({
         appoitment  
     })
@@ -99,12 +99,13 @@ app.post('/signupdoc', async (req, res) => {
     const h1 = req.body.h1
     const h2 = req.body.h2
    const mobile = req.body.mobile
-   console.log(req.file)
+   const reg = req.body.reg
+  // console.log(req.file)
 
     const user = new User({
         name,
         email,
-        password,degree,department,ex,add,city,role,h1,h2,symptoms,mobile
+        password,degree,department,ex,add,city,role,h1,h2,symptoms,mobile,reg
     })
     try {
         await user.save()
