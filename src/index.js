@@ -403,7 +403,7 @@ app.post('/delete_doc',async(req,res) =>{
     const verify = 'reject'
 try{
     const user = await User.findById(_id)
-    user.status=status
+    user.verify=verify
     await user.save()
     res.send({
         success:'doctor rejected'
