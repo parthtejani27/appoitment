@@ -195,7 +195,7 @@ app.get('/notapproved_doctors', auth, async (req, res) => {
         verify:'Not approved',
         role : 'doctor'
     })
-    .select('name degree _id ex') 
+    .select('name degree _id ex reg') 
 
     if(!doctors) {
         return res.send({
@@ -377,6 +377,37 @@ app.get('/getQue',auth,  async (req, res) => {
     }catch(e) {
         res.status(500).send()
     }
+})
+app.post('/approve_doc',async(req,res) =>{
+    const _id = req.body._id
+    const verify = 'approved'
+try{
+    const user = await User.findById(_id)
+    user.verify=verify
+    await user.save()
+    res.send({
+        success:'doctor verified'
+    })
+}catch(e)
+{
+    console.log(e)
+}
+})
+
+app.post('/delete_doc',async(req,res) =>{
+    const _id = req.body._id
+    const verify = 'reject'
+try{
+    const user = await User.findById(_id)
+    user.status=status
+    await user.save()
+    res.send({
+        success:'doctor rejected'
+    })
+}catch(e)
+{
+    console.log(e)
+}
 })
 
 app.post('/logout', auth, async (req, res) => {
