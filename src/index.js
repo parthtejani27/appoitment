@@ -198,7 +198,7 @@ app.get('/notapproved_doctors', auth, async (req, res) => {
         verify:'Not approved',
         role : 'doctor'
     })
-    .select('name degree _id ex reg') 
+    .select('name degree _id ex reg department') 
 
     if(!doctors) {
         return res.send({
