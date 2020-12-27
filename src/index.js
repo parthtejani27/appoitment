@@ -90,6 +90,7 @@ app.post('/signupdoc', async (req, res) => {
     const email = req.body.email
     const password = req.body.password
     const name = req.body.name
+    const surname = req.body.surname
     const degree = req.body.degree
     const department = req.body.department
     const symptoms = req.body.symptoms
@@ -104,7 +105,7 @@ app.post('/signupdoc', async (req, res) => {
   // console.log(req.file)
 
     const user = new User({
-        name,
+        name,surname,
         email,
         password,degree,department,ex,add,city,role,h1,h2,symptoms,mobile,reg
     })
@@ -135,12 +136,13 @@ app.post('/signup', async (req, res) => {
     const email = req.body.email
     const password = req.body.password
     const name = req.body.name
+    const surname = req.body.surname
     const gender = req.body.gender
     const city = req.body.city
     const mobile = req.body.mobile
   
     const user = new User({
-        name,
+        name,surname,
         email,
         password,
         city,
