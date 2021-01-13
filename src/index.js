@@ -181,7 +181,7 @@ app.get('/get_doctors', auth, async (req, res) => {
         verify:'approved',
         role : 'doctor'
     })
-    .select('name degree _id ex') 
+    .select('name degree _id ex imagepath') 
 
     if(!doctors) {
         return res.send({
@@ -200,7 +200,7 @@ app.get('/notapproved_doctors', auth, async (req, res) => {
         verify:'Not approved',
         role : 'doctor'
     })
-    .select('name degree _id ex reg department') 
+    .select('name degree _id ex reg department imagepath') 
 
     if(!doctors) {
         return res.send({
@@ -221,7 +221,7 @@ app.get('/department', auth, async (req, res) => {
         verify:'approved',
         role : 'doctor'
     })
-    .select('name degree _id ex') 
+    .select('name degree _id ex imagepath') 
 
     if(!doctors) {
         return res.send({
@@ -324,7 +324,7 @@ app.get('/search_doctor_by_name', auth, async (req, res) => {
         verify:'approved',
         // city : req.query.city,
         role : 'doctor'
-    }).select('_id name degree ex')
+    }).select('_id name degree ex imagepath')
     //console.log(doctors, req.query.name)
     if(!doctors) {
         return res.send({
@@ -346,7 +346,7 @@ app.get('/search_doctor_by_name1', auth, async (req, res) => {
         verify:'approved',
         // city : req.query.city,
         role : 'doctor'
-    }).select('_id name degree ex')
+    }).select('_id name degree ex imagepath')
     //console.log(doctors, req.query.name)
     if(!doctors) {
         return res.send({
@@ -364,7 +364,7 @@ app.get('/getDocdetails', auth, async (req, res) => {
     const doctor = await User.findOne({
         _id : req.query._id,
         role : 'doctor'
-    }).select('_id name degree department ex add city h1 h2')
+    }).select('_id name degree department ex add city h1 h2 imagepath')
 
     if(!doctor) {
         return res.send({

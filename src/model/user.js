@@ -54,6 +54,11 @@ const userSchema = new mongoose.Schema({
         default : 'Not approved',
         trim : true
     },
+    imagepath:{
+        type:String,
+        default:'../assets/gen.jpg',
+        trim:true
+    },
 
     h1 : {
         type : String,
