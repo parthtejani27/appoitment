@@ -171,7 +171,7 @@ app.post('/signin', async (req, res) => {
         await user.generateAuthToken()
         return res.send({user})
     }catch(e) {
-        return res.status(422).send({"error" : e})
+        return res.status(400).send({"error" : e})
     }
 })
 
